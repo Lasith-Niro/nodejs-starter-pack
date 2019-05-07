@@ -1,7 +1,9 @@
 {
-  "name": "bconic-survey-api",
+  "name": "nodejs-starter-pack",
   "version": "0.0.1",
   "private": true,
+  "author" : "Lasith-Niro",
+  "email" : "lasith.lan@gmail.com",
   "scripts": {
     "start": "nodemon src/index.js --exec babel-node",
     "build": "babel src -d dist",
