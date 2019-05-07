@@ -1,0 +1,34 @@
+service: bconic-location-api-sls
+
+plugins:
+  - serverless-webpack
+  # - serverless-domain-manager
+
+provider:
+  name: aws
+  role: arn:aws:iam::332880611709:role/bconic-analytics-lambda-vpc-execution-role
+  runtime: nodejs6.10
+  stage: dev
+  region: us-east-1
+  profile: default
+  deploymentBucket:
+    name: bconic-location-deploy
+  vpc:
+    securityGroupIds:
+      - sg-755f8a3d
+    subnetIds:
+      - subnet-1bba4935
+
+functions:
+  app:
+    handler: src/indexsls.handler
+    events:
+      - http: ANY /
+      - http: 'ANY {proxy+}'
+# custom:
+#   customDomain:
+#     domainName: 'api.location.bconic.com'
+#     basePath: ''
+#     stage: ${self:provider.stage}
+#     certificateName: '*.location.bconic.com'
+#     createRoute53Record: true

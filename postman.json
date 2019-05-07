@@ -1,0 +1,477 @@
+{
+	"info": {
+		"_postman_id": "089ac317-3be4-4771-88a2-70544fa06ee6",
+		"name": "bconic-lambda-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/dev/v1/dashboard/org/new",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "organization",
+						"value": "halflife"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://df778o5fg5.execute-api.us-east-1.amazonaws.com/dev/v1/dashboard/org/new",
+					"protocol": "https",
+					"host": [
+						"df778o5fg5",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"v1",
+						"dashboard",
+						"org",
+						"new"
+					]
+				},
+				"description": "Initialize an organization.(this will make an empty object in db.)"
+			},
+			"response": []
+		},
+		{
+			"name": "/dev/v1/dashboard/generate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "type",
+						"value": "android"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "organization",
+						"value": "halflife"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "appName",
+							"value": "testApp2",
+							"type": "text"
+						},
+						{
+							"key": "pkgName",
+							"value": "com.abc.xyz2",
+							"type": "text"
+						},
+						{
+							"key": "sha1",
+							"value": "dgsdg6545dd5sdh7vdfbdfbf753",
+							"type": "text"
+						},
+						{
+							"key": "bundleIdentifier",
+							"value": "egerehregerhgse3333",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://df778o5fg5.execute-api.us-east-1.amazonaws.com/dev/v1/dashboard/generate",
+					"protocol": "https",
+					"host": [
+						"df778o5fg5",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"v1",
+						"dashboard",
+						"generate"
+					]
+				},
+				"description": "Generate an API key for given app."
+			},
+			"response": []
+		},
+		{
+			"name": "/dev/v1/api/location/save/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "dId",
+							"value": "fsdfsd7sd8",
+							"type": "text"
+						},
+						{
+							"key": "lat",
+							"value": "34.05555",
+							"type": "text"
+						},
+						{
+							"key": "lon",
+							"value": "-5.55545",
+							"type": "text"
+						},
+						{
+							"key": "accuracy",
+							"value": "50.5",
+							"type": "text"
+						},
+						{
+							"key": "capturedAt",
+							"value": "2018-mar-25",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4001/v1/api/location/save/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"v1",
+						"api",
+						"location",
+						"save",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/dev/v1/dashboard/test/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://df778o5fg5.execute-api.us-east-1.amazonaws.com/dev/v1/dashboard/test/",
+					"protocol": "https",
+					"host": [
+						"df778o5fg5",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"v1",
+						"dashboard",
+						"test",
+						""
+					]
+				},
+				"description": "Test dashboard routes."
+			},
+			"response": []
+		},
+		{
+			"name": "/dev/v1/location/test/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://df778o5fg5.execute-api.us-east-1.amazonaws.com/dev/v1/api/location/test/",
+					"protocol": "https",
+					"host": [
+						"df778o5fg5",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"v1",
+						"api",
+						"location",
+						"test",
+						""
+					]
+				},
+				"description": "test route for test"
+			},
+			"response": []
+		},
+		{
+			"name": "/verify",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "organization",
+						"value": "halflife"
+					},
+					{
+						"key": "type",
+						"value": "android"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "appName",
+							"value": "testApp2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "pkgName",
+							"value": "com.abc.xyz2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "apiKey",
+							"value": "712a51556fc1fbb83ff30d8cc5c27e95",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://df778o5fg5.execute-api.us-east-1.amazonaws.com/dev/v1/dashboard/verify",
+					"protocol": "https",
+					"host": [
+						"df778o5fg5",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"v1",
+						"dashboard",
+						"verify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/verify [local]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "organization",
+						"value": "halflife"
+					},
+					{
+						"key": "type",
+						"value": "android"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "appName",
+							"value": "testApp2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "pkgName",
+							"value": "com.abc.xyz2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "apiKey",
+							"value": "712a51556fc1fbb83ff30d8cc5c27e95",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4001/dev/v1/dashboard/verify",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"dev",
+						"v1",
+						"dashboard",
+						"verify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/handshake",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "organization",
+						"value": "halflife"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "appName",
+							"value": "testApp2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "apiKey",
+							"value": "712a51556fc1fbb83ff30d8cc5c27e95",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://df778o5fg5.execute-api.us-east-1.amazonaws.com/dev/v1/dashboard/handshake",
+					"protocol": "https",
+					"host": [
+						"df778o5fg5",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"v1",
+						"dashboard",
+						"handshake"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/handshake [local]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "organization",
+						"value": "halflife"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "appName",
+							"value": "testApp2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "apiKey",
+							"value": "712a51556fc1fbb83ff30d8cc5c27e95",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4001/dev/v1/dashboard/handshake",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"dev",
+						"v1",
+						"dashboard",
+						"handshake"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4001/v1/dashboard/protect",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1MjY0MDM2NDd9.TxzqgkFJ1ytEUfLgUlmn2b4fPz6sPfzcMqSG_Jl3R2w"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"hash\" : \"f6427222c2c8df4b4fa407c74841d52e\",\n\"dId\" : \"android45\",\n\"data\" : [\n\t{\n\t\"lon\" : 45.5555,\n\t\"lat\" : 100.1,\n\t\"accuacy\" : 80,\n\t\"capturedAt\" : \"2018-may-20\"\n\t},\n\t{\n\t\"lon\" : 20.5555,\n\t\"lat\" : 80.1,\n\t\"accuacy\" : 20,\n\t\"capturedAt\" : \"2018-may-15\"\n\t}\n\t]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4001/v1/api/location/save_bulk/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"v1",
+						"api",
+						"location",
+						"save_bulk",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
